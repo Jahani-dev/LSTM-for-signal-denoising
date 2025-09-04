@@ -15,10 +15,9 @@ We generate a clean sine wave signal, add white Gaussian noise, and train an LST
 **LSTM (Long Short-Term Memory)** is a specialized type of recurrent neural network (RNN) that is excellent for learning from **sequential data**, especially when long-term dependencies matter.
 
 It’s particularly powerful for **denoising signals** like EEG, ECG, and audio, because:
-- It can **retain memory of past samples**
-- Learns **temporal patterns**
-- Suppresses noise using **nonlinear learning** (vs. traditional LMS/RLS filters which are linear)
-
+- Real-world signals (EEG, ECG, audio) are temporally correlated.
+- Traditional methods like RLS/LMS are linear; LSTM learns nonlinear temporal patterns.
+- LSTM has memory gates that allow it to focus on important parts of past data and ignore noise.
 ---
 
 ## LSTM Internals: Gate-Based Memory
